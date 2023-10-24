@@ -1,0 +1,14 @@
+body{
+    background: #223;
+    color: white;
+}
+
+.box{
+    background: red;
+    width: 200px;
+    height: 200px;
+}
+.box:hover{
+    background: blue;
+    height: 300px;
+}
