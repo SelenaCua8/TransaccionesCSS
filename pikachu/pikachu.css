@@ -1,0 +1,50 @@
+:root{
+    --pikachu-skin-color: #efdb6b;
+    --pikachu-cheek-color: #c95a4f;
+    --pikachu-borders-color: #303231;
+    --pikachu-head-size: 250px;
+
+}
+
+.container{
+ 
+}
+
+.pikachu{
+
+    & .head{
+        width: var(--pikachu-head-size);
+        height: var(--pikachu-head-size);
+        background: var(--pikachu-skin-color);
+
+    }
+
+    
+
+    & .ear{
+
+    }
+
+
+    & .face{
+        & .eyes-container{
+            & .eye{
+
+            }
+        }
+        & .nose{
+
+        }
+    
+         & .mouth-container{
+
+        }
+        & .cheek{
+
+        }
+    }
+    
+}
+
+
+
