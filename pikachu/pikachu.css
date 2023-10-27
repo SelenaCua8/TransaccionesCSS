@@ -34,6 +34,16 @@
 
     }
 
+    /*& .shadow-head{
+        width: var(--pikachu-head-size);
+        height: var(--pikachu-head-size);
+        clip-path: var(--pikachu-head-shape);
+        background: var(--pikachu-border-color);
+        position: absolute;
+        transform: scale(1.075);
+
+    }*/
+
     
 
     & .ear{
