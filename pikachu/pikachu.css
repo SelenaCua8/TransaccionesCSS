@@ -31,6 +31,8 @@
             height: 150px;
             background: red /*var(--pikachu-skin-color);*/;
             clip-path: var(--pikachu-ear-shape);
+            top: 0;
+            transform: translate(-50px, -50px);
     
         }
        
