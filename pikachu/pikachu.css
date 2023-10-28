@@ -5,9 +5,12 @@
     --pikachu-head-size: 250px;
     --pikachu-head-shape: polygon(15% 17%, 36% 5%, 64% 5%, 77% 12%, 88% 23%, 94% 36%, 94% 49%, 98% 59%, 97% 71%, 90% 84%, 71% 94%, 29% 94%, 11% 84%, 3% 70%, 2% 58%, 6% 49%, 6% 35%);
     --custom-filter: drop-shadow(-3px 0 0 var(--pikachu-border-color)) drop-shadow(3px 0 0 var(--pikachu-border-color)) drop-shadow(0 3px 0 var(--pikachu-border-color)) drop-shadow(0 -3px 0 var(--pikachu-border-color));
+    --pikachu-heard-shape: polygon(0 0, 25% 32%, 59% 53%, 71% 41%, 39% 11%);
 
 
 }
+
+/*clip-path: polygon(1% 1%, 25% 32%, 59% 53%, 71% 41%, 39% 11%); izquierda*/
 
 .container{
     display: flex;
@@ -21,16 +24,27 @@
 
     & .head-container{
         filter: var(--custom-filter);
+
+        & .ear{
+            position: absolute;
+            width: 175px;
+            height: 150px;
+            background: red /*var(--pikachu-skin-color);*/;
+            clip-path: var(--pikachu-ear-shape);
+    
+        }
+       
     }
 
     
     & .head{
-        
+        position: relative;
         width: var(--pikachu-head-size);
         height: var(--pikachu-head-size);
         background: var(--pikachu-skin-color);
         clip-path: var(--pikachu-head-shape);
-       
+
+      
 
     }
 
@@ -46,9 +60,7 @@
 
     
 
-    & .ear{
 
-    }
 
 
     & .face{
