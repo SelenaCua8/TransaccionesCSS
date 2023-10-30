@@ -20,22 +20,49 @@
 }
 
 
-.pikachu{
-
-    & .head-container{
-        filter: var(--custom-filter);
-
-        & .ear{
-            position: absolute;
-            width: 175px;
-            height: 150px;
-            background: var(--pikachu-skin-color);
-            clip-path: var(--pikachu-ear-shape);
-            top: 0;
-            transform: translate(-109px, -48px);
-    
+.pikachu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    & .head-container {
+      position: relative;
+      z-index: 1;
+      filter: var(--custom-filter);
+      animation: moveHead 1s infinite alternate;
+  
+      & .ear {
+        position: absolute;
+        width: 175px;
+        height: 150px;
+        background: var(--pikachu-skin-color);
+        clip-path: var(--pikachu-ear-shape);
+        transform: translate(-110px, -50px);
+        top: 0;
+  
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 20%;
+          background: var(--pikachu-skin-bright-color);
+          transform: rotate(35deg) translate(20px, 0);
+          position: absolute;
         }
-       
+  
+        &::after {
+          content: "";
+          display: block;
+          width: 40%;
+          height: 50%;
+          background: var(--pikachu-border-color);
+          clip-path: var(--pikachu-inner-ear-shape);
+        }
+  
+        &.right {
+          transform: translate(180px, -50px) scale(-1, 1);
+        }
+      }
     }
 
     
